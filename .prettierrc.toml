@@ -1,0 +1,5 @@
+addTrailingCommas = true
+inlineConditionals = false
+inlineLoops = false
+preferHashLabels = true
+preferSingleQuotes = true
