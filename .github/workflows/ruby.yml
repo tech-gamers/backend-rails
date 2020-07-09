@@ -47,9 +47,7 @@ jobs:
       - name: Run linters
         run: |
           bin/rubocop --parallel
-          bin/stylelint
-          bin/prettier
-          bin/eslint
+          bin/rbprettier --write ./**/*.rb
       - name: Run security checks
         run: |
           bin/bundler-audit --update
