@@ -46,6 +46,7 @@ group :development do
   gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
   # Security checkers
+  gem 'brakeman', require: false
   gem 'bundler-audit', require: false
 end
 
