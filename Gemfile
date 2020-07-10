@@ -48,6 +48,8 @@ group :development do
   # Security checkers
   gem 'brakeman', require: false
   gem 'bundler-audit', require: false
+  # DEV tools
+  gem 'solargraph', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
