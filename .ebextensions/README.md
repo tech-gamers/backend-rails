@@ -1,0 +1,1 @@
+https://medium.com/@dalezak/deploying-rails-6-to-aws-beanstalk-de69b356c900
