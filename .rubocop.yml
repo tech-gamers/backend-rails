@@ -62,6 +62,9 @@ Style/HashTransformKeys:
 Style/HashTransformValues:
   Enabled: true
 
+Style/IfUnlessModifier:
+  Enabled: false
+
 Style/RedundantAssignment:
   Enabled: true
 
