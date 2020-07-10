@@ -45,6 +45,7 @@ group :development do
   gem 'prettier', require: false
   gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
   # Security checkers
   gem 'brakeman', require: false
   gem 'bundler-audit', require: false

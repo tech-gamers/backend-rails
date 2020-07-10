@@ -1,13 +1,19 @@
 require:
   - rubocop-rails
+  - rubocop-rspec
 
 AllCops:
+  TargetRubyVersion: 2.6
+  Include:
+    - "**/Gemfile"
+    - "**/Rakefile"
+    - "**/config.ru"
+    - "**/*.rb"
   Exclude:
     - "bin/**/*"
     - "config/**/*"
     - "db/**/*"
     - "node_modules/**/*"
-    - "spec/**/*"
     - "vendor/**/*"
 
 Layout/EmptyLinesAroundAttributeAccessor:
