@@ -38,18 +38,23 @@ group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '~> 3.2'
   gem 'web-console', '>= 3.3.0'
+
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
   # Linters
   gem 'prettier', require: false
   gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
+
   # Security checkers
   gem 'brakeman', require: false
   gem 'bundler-audit', require: false
+
   # DEV tools
+  gem 'overcommit', require: false
   gem 'solargraph', require: false
 end
 

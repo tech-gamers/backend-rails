@@ -1,0 +1,19 @@
+# You may want to uninstall overcommit if you encountered issues when rebasing
+verify_signatures: true
+
+PreCommit:
+  Rubocop:
+    enabled: true
+    command: ["bin/rubocop", "--parallel"]
+  FixMe:
+    enabled: true
+
+CommitMsg:
+  CaptitalizedSubject:
+    enabled: false
+  TrailingPeriod:
+    enabled: false
+  SingleLineSubject:
+    enabled: false
+  TextWidth:
+    enabled: true
