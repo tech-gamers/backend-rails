@@ -62,6 +62,10 @@ Style/HashTransformKeys:
 Style/HashTransformValues:
   Enabled: true
 
+# Actually we want to forbid the if/unless-modifier but there's no option
+Style/IfUnlessModifier:
+  Enabled: false
+
 Style/RedundantAssignment:
   Enabled: true
 
