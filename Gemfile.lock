@@ -110,7 +110,6 @@ GEM
     parser (2.7.1.4)
       ast (~> 2.4.1)
     pg (1.2.3)
-    prettier (0.19.0)
     puma (4.3.5)
       nio4r (~> 2.0)
     rack (2.2.3)
@@ -259,7 +258,6 @@ DEPENDENCIES
   listen (~> 3.2)
   overcommit
   pg (>= 0.18, < 2.0)
-  prettier
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
   rspec-rails

@@ -3,3 +3,5 @@ inlineConditionals = false
 inlineLoops = false
 preferHashLabels = true
 preferSingleQuotes = true
+printWidth = 80
+tabWidth = 2
