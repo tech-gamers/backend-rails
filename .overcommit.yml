@@ -1,15 +1,18 @@
 # You may want to uninstall overcommit if you encountered issues when rebasing
-verify_signatures: true
+verify_signatures: false
 
 PreCommit:
+  FixMe:
+    enabled: true
   Rubocop:
     enabled: true
     command: ["bin/rubocop", "--parallel"]
-  FixMe:
+  SolargraphTypeCheck:
     enabled: true
+    command: ["scripts/solargraph-typecheck"]
 
 CommitMsg:
-  CaptitalizedSubject:
+  CapitalizedSubject:
     enabled: false
   TrailingPeriod:
     enabled: false

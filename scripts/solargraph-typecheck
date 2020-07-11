@@ -1,0 +1,8 @@
+#!/bin/bash
+ruby_changes=$(git diff --name-only --cached -- '*.rb')
+
+if [ -z "${ruby_changes}" ]; then
+  echo "No ruby changes"
+else
+  "$(dirname "$0")"/../bin/solargraph --level typed "${ruby_changes}"
+fi
