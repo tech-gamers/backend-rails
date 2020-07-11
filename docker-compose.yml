@@ -1,0 +1,48 @@
+version: "3.7"
+
+services:
+  app:
+    container_name: app
+    build:
+      context: .
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/tmp
+      - /app/log
+      - /app/node_modules
+    ports:
+      - ${PORT}:${PORT}
+    depends_on:
+      - redis
+      - postgres
+    networks:
+      - webnet
+
+  redis:
+    container_name: redis
+    image: redis
+    networks:
+      - webnet
+
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      PG_DATA: /var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - webnet
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+networks:
+  webnet:
+
+volumes:
+  pgdata:
