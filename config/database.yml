@@ -54,7 +54,7 @@ test:
   <<: *default
   host: localhost
   database: backend_test
-  username: <%= ENV["PGUSER"] || backend %>
+  username: <%= ENV["PGUSER"] || "backend" %>
   password: <%= ENV["PGPASSWORD"] || "" %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
