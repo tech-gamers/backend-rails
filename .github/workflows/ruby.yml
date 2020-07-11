@@ -61,8 +61,8 @@ jobs:
         image: postgres:11
         env:
           POSTGRES_USER: postgres
-          POSTGRES_DB: postgres
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: backend_test
+          POSTGRES_PASSWORD: password
         ports:
           - 5432:5432
         # options: >-
