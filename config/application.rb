@@ -30,6 +30,9 @@ module Backend
     # the framework and any gems in your application.
     config.hosts << 'liu-backend.com'
 
+    config.hosts << 'liu-backend.com'
+    config.hosts << 'rails.liu-backend.com'
+
     # Don't generate system test files.
     config.generators.system_tests = nil
   end
