@@ -18,7 +18,6 @@ RUN bundle
 COPY package.json .
 COPY yarn.lock .
 RUN yarn install --check-files
-# RUN yarn upgrade webpack@^4.0.0
 
 COPY . .
 
