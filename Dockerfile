@@ -21,4 +21,6 @@ RUN yarn install --check-files
 
 COPY . .
 
-CMD ["bin/rails", "server", "-b", "0.0.0.0"]
+RUN bundle exec rake assets:precompile
+
+CMD ["rails", "server", "-b", "0.0.0.0"]
