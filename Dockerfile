@@ -18,8 +18,10 @@ RUN bundle
 COPY package.json .
 COPY yarn.lock .
 RUN yarn install --check-files
-RUN yarn upgrade webpack@^4.0.0
+# RUN yarn upgrade webpack@^4.0.0
 
 COPY . .
 
-CMD ["bin/rails", "server", "-b", "0.0.0.0"]
+RUN bundle exec rake assets:precompile
+
+CMD ["rails", "server", "-b", "0.0.0.0"]
