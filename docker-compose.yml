@@ -1,16 +1,17 @@
 version: "3.7"
 
 # Steps:
-# 1. bundle install
-# 2. bundle package
-# 3. docker-compose up --build
+# 1. docker-compose up --build
+# 2. docker-compose run --rm app bundle install # if GemNotFound after 1
+# 3. change command to bin/rails if debugger not responding
 services:
   app:
     command: bin/rdebug-ide --host 0.0.0.0 --port ${DEBUG_PORT} -- bin/rails s -p ${PORT} -b 0.0.0.0
+    # command: bin/rails server -p ${PORT} -b 0.0.0.0
     container_name: app
     build:
       context: .
-      target: development
+      dockerfile: Dockerfile.dev
     env_file:
       - .env
     volumes:
