@@ -1,1 +1,4 @@
-Rails.application.routes.draw { root to: 'pages#home' }
+Rails.application.routes.draw do
+  root to: 'pages#home'
+  resources :issues
+end
