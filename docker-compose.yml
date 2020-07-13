@@ -1,5 +1,9 @@
 version: "3.7"
 
+# Steps:
+# 1. bundle install
+# 2. bundle package
+# 3. docker-compose up --build
 services:
   app:
     command: bin/rdebug-ide --host 0.0.0.0 --port ${DEBUG_PORT} -- bin/rails s -p ${PORT} -b 0.0.0.0
@@ -12,6 +16,7 @@ services:
       - .:/app
       - /app/log
       - /app/node_modules
+      - /bundle
     ports:
       - ${DEBUG_PORT}:${DEBUG_PORT}
       - ${PORT}:${PORT}
