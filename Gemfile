@@ -54,6 +54,7 @@ group :development do
 
   # DEV tools
   gem 'overcommit', require: false
+  gem 'ruby-debug-ide'
   gem 'solargraph', require: false
 end
 
