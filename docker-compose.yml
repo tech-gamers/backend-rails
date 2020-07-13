@@ -9,7 +9,7 @@ version: "3.7"
 # 1. we must have at least one breakpoint to let debugger responding!
 services:
   app:
-    command: bin/rdebug-ide --host 0.0.0.0 --port ${DEBUG_PORT} -- bin/rails s -p ${PORT} -b 0.0.0.0
+    command: ./scripts/debug-server.sh
     # command: bin/rails server -p ${PORT} -b 0.0.0.0
     container_name: app
     restart: on-failure
