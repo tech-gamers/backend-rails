@@ -10,7 +10,6 @@ version: "3.7"
 services:
   app:
     command: ./scripts/debug-server.sh
-    # command: bin/rails server -p ${PORT} -b 0.0.0.0
     container_name: app
     restart: on-failure
     build:
