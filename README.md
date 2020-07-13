@@ -5,6 +5,20 @@
 
 I will test all fancy shits here.
 
+## Setup
+
+1. initialization
+   ```
+   git clone git@github.com:robturtle/backend.git
+   cd backend
+   ./scripts/setup.sh
+   ```
+2. edit ./.github/workflows/dokku.yml and update vars
+
+### How to deploy?
+
+Create a GitHub release, it will automatically trigger the deploy procedure.
+
 ## Scaffolding
 
 All scaffolding related code should follows the procedure as below:
