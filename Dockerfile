@@ -1,4 +1,4 @@
-FROM ruby:2.6.6
+FROM ruby:2.6.6 As development
 
 WORKDIR /app
 
@@ -12,6 +12,9 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN apt-get update && apt-get install -y yarn
 
+# Also u can create a local cache for docker-compose to use via the volume.
+# Simply run `bunble package` in the local machine.
+ENV BUNDLE_PATH /bundle
 COPY Gemfile* ./
 RUN bundle
 
@@ -20,6 +23,12 @@ COPY yarn.lock .
 RUN yarn install --check-files
 
 COPY . .
+
+FROM ruby:2.6.6 As production
+
+WORKDIR /app
+
+COPY --from=development /app ./
 
 RUN bundle exec rake assets:precompile
 
