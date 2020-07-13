@@ -54,8 +54,11 @@ group :development do
 
   # DEV tools
   gem 'overcommit', require: false
-  gem 'ruby-debug-ide'
   gem 'solargraph', require: false
+
+  ## Debugging
+  gem 'debase' # IDE-friendly debugger impl
+  gem 'ruby-debug-ide'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
