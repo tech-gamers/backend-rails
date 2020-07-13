@@ -1,4 +1,4 @@
-FROM ruby:2.6.6
+FROM ruby:2.6.6 As development
 
 WORKDIR /app
 
@@ -23,6 +23,12 @@ COPY yarn.lock .
 RUN yarn install --check-files
 
 COPY . .
+
+FROM ruby:2.6.6 As production
+
+WORKDIR /app
+
+COPY --from=development /app ./
 
 RUN bundle exec rake assets:precompile
 

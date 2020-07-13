@@ -10,6 +10,7 @@ services:
     container_name: app
     build:
       context: .
+      target: development
     env_file:
       - .env
     volumes:
