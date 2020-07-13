@@ -28,8 +28,11 @@ module Backend
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
     config.hosts << 'liu-backend.com'
     config.hosts << 'rails.liu-backend.com'
+
+    config.log_level = ENV.fetch('LOG_LEVEL', :debug)
 
     # Don't generate system test files.
     config.generators.system_tests = nil
