@@ -2,6 +2,7 @@ version: "3.7"
 
 services:
   app:
+    command: bin/rdebug-ide --host 0.0.0.0 --port ${DEBUG_PORT} -- bin/rails s -p ${PORT} -b 0.0.0.0
     container_name: app
     build:
       context: .
@@ -13,6 +14,7 @@ services:
       - /app/log
       - /app/node_modules
     ports:
+      - ${DEBUG_PORT}:${DEBUG_PORT}
       - ${PORT}:${PORT}
     depends_on:
       - redis
