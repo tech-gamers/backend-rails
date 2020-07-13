@@ -10,7 +10,6 @@ services:
       - .env
     volumes:
       - .:/app
-      - /app/tmp
       - /app/log
       - /app/node_modules
     ports:
