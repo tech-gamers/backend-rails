@@ -1,0 +1,1 @@
+module IssuesHelper; end
