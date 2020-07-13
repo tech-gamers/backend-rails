@@ -17,7 +17,7 @@ COPY yarn.lock .
 RUN yarn install --check-files
 
 COPY Gemfile* ./
-RUN bundle install
+RUN bundle install --without test development
 
 COPY . .
 
