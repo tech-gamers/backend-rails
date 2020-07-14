@@ -1,0 +1,1 @@
+class Issue < ApplicationRecord; end
