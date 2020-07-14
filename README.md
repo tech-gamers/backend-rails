@@ -4,3 +4,26 @@
 # backend
 
 I will test all fancy shits here.
+
+## Setup
+
+1. initialization
+   ```
+   git clone git@github.com:tech-gamers/backend-rails.git
+   cd backend
+   bundle install
+   ./scripts/setup.sh
+   ```
+2. edit ./.github/workflows/dokku.yml and update vars
+
+### How to deploy?
+
+Create a GitHub release, it will automatically trigger the deploy procedure.
+
+## Scaffolding
+
+All scaffolding related code should follows the procedure as below:
+
+1. make PR with base directed to `scaffold`
+2. squash and merge
+3. `master` cherry-pick that squashed commit from `scaffold` branch

@@ -4,9 +4,6 @@ version: "3.7"
 # 1. docker-compose up --build
 # 2. docker-compose run --rm app bundle install # if GemNotFound after 1
 # 4. docker-compose run --rm app bash # to inspect from inside
-#
-# Gotchas:
-# 1. we must have at least one breakpoint to let debugger responding!
 services:
   app:
     command: ./scripts/debug-server.sh
