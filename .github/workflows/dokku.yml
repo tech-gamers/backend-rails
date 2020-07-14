@@ -5,7 +5,7 @@ on:
     types:
       - created
     branches:
-      - master
+      - website
 
 env:
   DOKKU_HOST: "liu-backend.com"
