@@ -28,11 +28,6 @@ Check text width..........................................[TextWidth] OK
 ✓ All commit-msg hooks passed
 ```
 
-Some interesting checkers are:
-
-- Prettier: it use the `prettier` npm package to auto-format your code.
-- Rubocop & SolargraphTypeCheck: ruby-specific language linters
-
 ### Continuous Integration
 
 Powered by `GitHub Actions`, we can run `CI/CD` inside the GitHub. Yes we no longer have to setup a separate CI service anymore!
