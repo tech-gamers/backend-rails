@@ -48,6 +48,11 @@ Style/AccessorGrouping:
 Style/BisectedAttrAccessor:
   Enabled: true
 
+Style/ClassAndModuleChildren:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: nested
+
 Style/Documentation:
   Enabled: false
 
@@ -55,6 +60,9 @@ Style/ExponentialNotation:
   Enabled: true
 
 Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/GuardClause:
   Enabled: false
 
 Style/HashEachMethods:
