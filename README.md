@@ -38,13 +38,13 @@ Some interesting checkers are:
 
 Powered by `GitHub Actions`, we can run `CI/CD` inside the GitHub. Yes we no longer have to setup a separate CI service anymore!
 
-Whenever _a commit is pushed_ to the GitHub or whenever _a PR is created_, the CI will run.
+Whenever **a commit is pushed** to the GitHub or whenever **a PR is created**, the CI will run.
 
 ### Continuous Deployment
 
 Right now it was configured with Dokku. The reason for choosing Dokku is because it's really super easy to install and super fast to deploy. You can setup a new Dokku server through DigitalOcean.
 
-Whenever _a new release_ is created the deployment will run.
+Whenever **a new release** is created the deployment will run.
 
 ### Dockerized developing environment
 
