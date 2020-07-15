@@ -1,9 +1,9 @@
 class User < ApplicationRecord
   devise :lockable,
-         :omniauthable,
          # OAuth
-         :registratable,
+         :omniauthable,
          # allow signing up new users
+         :registerable,
          :trackable
 
   class << self
