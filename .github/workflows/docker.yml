@@ -6,7 +6,7 @@ on:
       - created
 
 jobs:
-  deploy:
+  push_docker_image:
     runs-on: ubuntu-latest
     steps:
       - name: Push Docker Image
