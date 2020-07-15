@@ -3,7 +3,7 @@
   "description": "Yang's backend playground",
   "scripts": {
     "dokku": {
-      "postdeploy": "bundle exec rails db:migrate"
+      "postdeploy": "./scripts/post_deploy.sh"
     }
   }
 }
