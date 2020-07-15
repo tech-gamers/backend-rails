@@ -3,7 +3,7 @@ verify_signatures: false
 
 PreCommit:
   Prettier:
-    enabled: true
+    enabled: false
     command: ["scripts/prettier"]
   FixMe:
     enabled: true

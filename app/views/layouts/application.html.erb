@@ -14,8 +14,10 @@
     <%= alert %>
     <% if current_user %>
       <p><%= link_to('Logout', destroy_user_session_path, method: :delete) %></p>
-    <% elsif !%w[/sign_up /sign_in].include?(request.fullpath) %>
-      <p><%= link_to('Sign Up/Log In', new_session_path) %></p>
+    <% else %>
+      <% if %w[/sign_up /sign_in].all?{ |p| !request.fullpath.end_with?(p) } %>
+        <p><%= link_to('Sign Up/Log In', new_session_path) %></p>
+      <% end %>
     <% end %>
     <%= yield %>
   </body>
