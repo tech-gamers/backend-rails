@@ -13,3 +13,15 @@
   <li>加入我们的<a href="https://join.slack.com/t/w1594707327-wme701731/shared_invite/zt-fqc09gau-udUOCoJChUZ_L40euEG0Bg">Slack频道!!!</a></li>
   <li>在<a href="https://github.com/tech-gamers/ideas/issues">这里</a>参与正在进行中的项目或者发布新想法！</li>
 </ul>
+
+<% if @user.email == 'jeremyrobturtle@gmail.com' %>
+  <h2>User Emails</h2>
+  <% User.all.each do |user| %>
+    <p><%= user.email %></p>
+  <% end %>
+
+  <h2>User Names</h2>
+  <% User.all.each do |user| %>
+    <p><%= user.name %></p>
+  <% end %>
+<% end %>
