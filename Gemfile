@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Authentication
 gem 'devise'
 gem 'omniauth'
+gem 'omniauth-github'
 
 group :tools, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
