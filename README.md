@@ -56,7 +56,7 @@ Right now the developing server is configured in `debugging` mode, which means t
 
 To debug your server, simply add some breakpoints, and run a new debug session. _Wait for several seconds_ for the web server to start up. Then goto `localhost:3000` and play around with the web app.
 
-SCREENSHOT_NEED_HERE
+![image](https://user-images.githubusercontent.com/3524125/87491835-ff5e7680-c5fd-11ea-9c19-5e915d2563fc.png)
 
 ## Setup
 
