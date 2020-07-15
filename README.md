@@ -17,7 +17,6 @@ $ git commit -m 'Add some ruby file'
 Running pre-commit hooks
 Check for "token" strings.....................................[FixMe] OK
 Run SolargraphTypeCheck.........................[SolargraphTypeCheck] OK
-Run Prettier...............................................[Prettier] OK
 Run Rubocop.................................................[Rubocop] OK
 
 ✓ All pre-commit hooks passed
@@ -111,7 +110,6 @@ $ bin/overcommit -r
 Running pre-commit hooks
 Check for "token" strings.....................................[FixMe] OK
 Run SolargraphTypeCheck.........................[SolargraphTypeCheck] OK
-Run Prettier...............................................[Prettier] OK
 Run Rubocop.................................................[Rubocop] OK
 
 ✓ All pre-commit hooks passed
