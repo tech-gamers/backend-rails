@@ -12,7 +12,7 @@
   <body>
     <%= notice %>
     <%= alert %>
-    <% unless user_signed_in? %>
+    <% if current_user %>
       <p><%= link_to('Logout', destroy_user_session_path, method: :delete) %></p>
     <% end %>
     <%= yield %>
