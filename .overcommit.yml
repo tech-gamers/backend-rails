@@ -2,9 +2,6 @@
 verify_signatures: false
 
 PreCommit:
-  Prettier:
-    enabled: true
-    command: ["scripts/prettier"]
   FixMe:
     enabled: true
   Rubocop:
