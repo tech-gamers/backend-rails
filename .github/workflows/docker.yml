@@ -10,9 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Push Docker Image
-        uses: docker/build-push-action@v1
+        uses: HurricanKai/Publish-Docker-Github-Action@master
+        # if: contains(github.ref, 'refs/tags/v')
         with:
+          name: robturtle/scaffold-rails
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: robturtle/scaffold-rails
-          tag_with_ref: true
+          tagging: true
+          cache: true
