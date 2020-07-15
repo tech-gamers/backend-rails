@@ -1,1 +1,1 @@
-Rails.application.routes.draw {}
+Rails.application.routes.draw { root to: 'pages#home' }
