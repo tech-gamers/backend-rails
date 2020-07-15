@@ -49,7 +49,7 @@ jobs:
           bin/rubocop --parallel
       - name: Run security checks
         run: |
-          bin/bundler-audit --update
+          bin/bundler-audit --update --ignore CVE-2015-9284
           bin/brakeman -q -w2
 
   tests:
