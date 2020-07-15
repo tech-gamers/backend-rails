@@ -58,6 +58,7 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     ast (2.4.1)
     backport (1.1.2)
+    bcrypt (3.1.13)
     benchmark (0.1.0)
     bindex (0.8.1)
     bootsnap (1.4.6)
@@ -74,6 +75,12 @@ GEM
     debase (0.2.4.1)
       debase-ruby_core_source (>= 0.10.2)
     debase-ruby_core_source (0.10.9)
+    devise (4.7.2)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.4.4)
     e2mmap (0.1.0)
     erubi (1.9.0)
@@ -106,6 +113,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
+    orm_adapter (0.5.0)
     overcommit (0.54.0)
       childprocess (>= 0.6.3, < 5)
       iniparse (~> 1.4)
@@ -152,6 +160,9 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.7.1)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     reverse_markdown (2.0.0)
       nokogiri
     rexml (3.2.4)
@@ -236,6 +247,8 @@ GEM
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
     unicode-display_width (1.7.0)
+    warden (1.2.8)
+      rack (>= 2.0.6)
     web-console (4.0.3)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -260,6 +273,7 @@ DEPENDENCIES
   bundler-audit
   byebug
   debase
+  devise
   jbuilder (~> 2.7)
   listen (~> 3.2)
   overcommit
