@@ -4,8 +4,6 @@ on:
   release:
     types:
       - created
-    branches:
-      - website
 
 env:
   DOKKU_HOST: "liu-backend.com"

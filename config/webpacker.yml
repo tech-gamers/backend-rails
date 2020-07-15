@@ -53,7 +53,6 @@ development:
   compile: true
 
   # Verifies that correct packages and versions are installed by inspecting package.json, yarn.lock, and node_modules
-  # TODO: this is so annoying. Come back w/ a good solution
   check_yarn_integrity: false
 
   # Reference: https://webpack.js.org/configuration/dev-server/

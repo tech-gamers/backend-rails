@@ -21,8 +21,4 @@ RUN bundle install --without test tools
 
 COPY . .
 
-# FIXME: it requires development dependcies
-#   there must be a way to do it properly
-# RUN bundle exec rake assets:precompile
-
 CMD ["rails", "server", "-b", "0.0.0.0"]
