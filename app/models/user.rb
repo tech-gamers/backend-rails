@@ -1,5 +1,10 @@
 class User < ApplicationRecord
-  devise :lockable, :omniauthable, :rememberable, :trackable
+  devise :lockable,
+         :omniauthable,
+         # OAuth
+         :registratable,
+         # allow signing up new users
+         :trackable
 
   class << self
     def from_omniauth(auth)
