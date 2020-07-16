@@ -18,9 +18,12 @@
 
 <% if @user.auths.find_by(provider: 'github').email == 'jeremyrobturtle@gmail.com' %>
   <% User.all.each do |user| %>
-    <br/>
-    <% user.auths.each do |auth| %>
-      <p><%= auth.provider %>: <%= auth.username %></p>
-    <% end %>
+    <ul>
+      <li>name: <%= user.name %></li>
+      <% user.auths.each do |auth| %>
+        <li><%= auth.provider %>: <%= auth.username %></li>
+        <li>email: <%= auth.email %></li>
+      <% end %>
+    </ul>
   <% end %>
 <% end %>
