@@ -273,8 +273,8 @@ Devise.setup do |config|
   unless Rails.env.test?
     env = Rails.env.production? ? :prod : :dev
     config.omniauth :github,
-                    Rails.application.credentials.github.dig(:oauth, env, :id),
-                    Rails.application.credentials.github.dig(:oauth, env, :secret),
+                    Rails.application.credentials&.github&.dig(:oauth, env, :id),
+                    Rails.application.credentials&.github&.dig(:oauth, env, :secret),
                     scope: 'auth'
   end
 
