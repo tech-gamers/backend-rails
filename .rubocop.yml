@@ -37,6 +37,10 @@ Lint/RaiseException:
 Lint/StructNewOverride:
   Enabled: true
 
+Metrics/AbcSize:
+  Enabled: true
+  Max: 25
+
 Metrics/MethodLength:
   Enabled: true
   Max: 30
@@ -48,6 +52,11 @@ Style/AccessorGrouping:
 Style/BisectedAttrAccessor:
   Enabled: true
 
+Style/ClassAndModuleChildren:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: nested
+
 Style/Documentation:
   Enabled: false
 
@@ -55,6 +64,9 @@ Style/ExponentialNotation:
   Enabled: true
 
 Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/GuardClause:
   Enabled: false
 
 Style/HashEachMethods:
