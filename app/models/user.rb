@@ -16,6 +16,7 @@ class User < ApplicationRecord
         user.name = auth.info.name
         user.uid = auth.uid
         user.email = auth.info.email
+        user.data = auth
       end
     end
   end
