@@ -69,6 +69,10 @@ jobs:
         #   --health-interval 10s
         #   --health-timeout 5s
         #   --health-retries 5
+      redis:
+        image: redis
+        ports:
+          - 6379:6379
 
     steps:
       - name: Checkout code
@@ -110,11 +114,15 @@ jobs:
 
       - name: Setup test database
         env:
-          RAILS_ENV: test
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+          RAILS_ENV: ci
           PGUSER: postgres
           PGPASSWORD: postgres
         run: |
           bin/rails db:setup
 
       - name: Run tests
+        env:
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+          RAILS_ENV: ci
         run: bin/rspec
