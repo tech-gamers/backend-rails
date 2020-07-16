@@ -37,6 +37,10 @@ Lint/RaiseException:
 Lint/StructNewOverride:
   Enabled: true
 
+Metrics/AbcSize:
+  Enabled: true
+  Max: 25
+
 Metrics/MethodLength:
   Enabled: true
   Max: 30
