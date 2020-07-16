@@ -275,7 +275,7 @@ Devise.setup do |config|
     config.omniauth :github,
                     Rails.application.credentials.github.dig(:oauth, env, :id),
                     Rails.application.credentials.github.dig(:oauth, env, :secret),
-                    scope: 'user'
+                    scope: 'auth'
   end
 
   # ==> Warden configuration

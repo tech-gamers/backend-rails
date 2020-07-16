@@ -1,8 +1,8 @@
 module Callbacks
   class OmniauthController < Devise::OmniauthCallbacksController
     def github
-      @user = User.from_github(request.env['omniauth.auth'])
-      sign_in_and_redirect(@user)
+      @auth = Auth.from_github(request.env['omniauth.auth'])
+      sign_in_and_redirect(@auth)
     end
   end
 end

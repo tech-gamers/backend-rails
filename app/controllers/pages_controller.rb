@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
-    if current_user
-      redirect_to current_user
+    if current_auth
+      redirect_to current_auth
     end
   end
 
