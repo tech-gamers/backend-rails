@@ -235,6 +235,8 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    sentry-raven (3.0.0)
+      faraday (>= 1.0)
     solargraph (0.39.11)
       backport (~> 1.1)
       benchmark
@@ -310,6 +312,7 @@ DEPENDENCIES
   rubocop-rspec
   ruby-debug-ide
   sass-rails (>= 6)
+  sentry-raven
   solargraph
   spring
   spring-watcher-listen (~> 2.0.0)
