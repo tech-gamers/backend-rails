@@ -14,11 +14,13 @@ RUN apt-get update && apt-get install -y yarn
 
 COPY package.json .
 COPY yarn.lock .
-RUN yarn install --check-files
+RUN yarn install --production=true
 
 COPY Gemfile* ./
 RUN bundle install --without test tools
 
 COPY . .
+
+RUN RAILS_ENV=production bin/rails assets:precompile
 
 CMD ["rails", "server", "-b", "0.0.0.0"]

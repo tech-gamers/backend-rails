@@ -6,7 +6,7 @@ version: "3.7"
 # 4. docker-compose run --rm app bash # to inspect from inside
 services:
   app:
-    command: ./scripts/debug-server.sh
+    command: ./scripts/dev-server.sh
     container_name: app
     restart: on-failure
     build:
