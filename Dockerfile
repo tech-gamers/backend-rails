@@ -21,6 +21,6 @@ RUN bundle install --without test tools
 
 COPY . .
 
-RUN RAILS_ENV=production bin/rails assets:precompile
+RUN RAILS_ENV=production SECRET_KEY_BASE=1 bin/rails assets:precompile
 
 CMD ["rails", "server", "-b", "0.0.0.0"]
