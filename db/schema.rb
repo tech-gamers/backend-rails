@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_16_054633) do
+ActiveRecord::Schema.define(version: 2020_07_16_062045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,8 +41,10 @@ ActiveRecord::Schema.define(version: 2020_07_16_054633) do
     t.string "encrypted_password"
     t.string "username"
     t.string "avatar_url"
+    t.bigint "user_id", null: false
     t.index ["email"], name: "index_auths_on_email", unique: true
     t.index ["unlock_token"], name: "index_auths_on_unlock_token", unique: true
+    t.index ["user_id"], name: "index_auths_on_user_id"
   end
 
   create_table "issues", force: :cascade do |t|
@@ -52,4 +54,12 @@ ActiveRecord::Schema.define(version: 2020_07_16_054633) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "avatar_url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "auths", "users"
 end

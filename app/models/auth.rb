@@ -10,11 +10,11 @@ class Auth < ApplicationRecord
          :trackable # allow signing up new users
 
   class << self
-    def from_github(data)
-      where(provider: data.provider, uid: data.uid).first_or_create do |auth|
+    def from_github(data, user: nil)
+      where(provider: data.provider, uid: data.uid).first_or_create! do |auth|
+        auth.user = user
         auth.provider = data.provider
         auth.uid = data.uid
-        auth.data = data
 
         auth.username = data.info.nickname
         auth.name = data.info.name
@@ -23,4 +23,12 @@ class Auth < ApplicationRecord
       end
     end
   end
+
+  belongs_to :user, optional: true
+
+  before_validation lambda {
+    self.user = User.create!(name: name, avatar_url: avatar_url)
+  }, if: -> { !user_id }
+
+  validates :user_id, presence: true
 end

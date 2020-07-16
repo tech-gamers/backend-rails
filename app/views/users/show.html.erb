@@ -16,14 +16,11 @@
 </ul>
 <img src="/wechat.jpeg">
 
-<% if @user.email == 'jeremyrobturtle@gmail.com' %>
-  <h2>User Emails</h2>
+<% if @user.auths.find_by(provider: 'github').email == 'jeremyrobturtle@gmail.com' %>
   <% User.all.each do |user| %>
-    <p><%= user.email %></p>
-  <% end %>
-
-  <h2>User Names</h2>
-  <% User.all.each do |user| %>
-    <p><%= user.name %></p>
+    <br/>
+    <% user.auths.each do |auth| %>
+      <p><%= auth.provider %>: <%= auth.username %></p>
+    <% end %>
   <% end %>
 <% end %>

@@ -11,5 +11,5 @@ Rails.application.routes.draw do
                omniauth_callbacks: 'callbacks/omniauth', sessions: 'sessions'
              }
 
-  resources :auths
+  resources :users
 end
